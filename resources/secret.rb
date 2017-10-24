@@ -9,6 +9,7 @@ property :clients, [String, Array], desired_state: false
 property :search, String, default: '*:*', desired_state: false
 property :raw_data, [Hash, Mash], default: {}
 property :environment, [String, NilClass], default: nil, nillable: true, desired_state: false
+property :sensitive, [TrueClass, FalseClass], default: true
 
 load_current_value do
   begin
